@@ -311,12 +311,16 @@ value:元素初始值 (type 为radio时必须指定初始值
 size:表单元素初始宽度
 maxlength:类型为text和password时的最大字符数
 checkd:type 为radio 或 checkbox时，指定按钮是否被选中
+
+require 必须填写
+placeholder 占位符
+pattern 正则匹配
 -->
 
 <h1>注册</h1>
 <form action="first_test.html" method="get">
-    <p name="passport">账号 <input type="text" name="username" value="用户名" maxlength="12" size="30"></p>
-    <p>密码 <input type="password" name="pwd" size="30" maxlength="12"></p>
+    <p name="passport">账号 <input type="text" name="username" value="用户名" maxlength="12" size="30" placeholder="请输入用户名" required></p>
+    <p>密码 <input type="password" name="pwd" size="30" maxlength="12" required></p>
 <!--    单选框 -->
     <p> 想要多少钱：<br/>
         <input type="radio" value="100" name="money"/>100<br/>
@@ -357,9 +361,38 @@ checkd:type 为radio 或 checkbox时，指定按钮是否被选中
     </p>
 
     <p>
-        <input type="file" value="文件" name="upload_file">
+        <input type="file" value="文件" name="upload_file" required>
     </p>
 
+<!--    URL 验证 -->
+    <p>
+        链接：
+        <input type="url" name="upload_url">
+    </p>
+
+   <p>
+       邮箱：
+       <input type="email" name="upload_email" id="email_label"/>
+   </p>
+
+    <p>
+        搜
+        <input type="search" name="search_text">
+    </p>
+
+    <p>
+        自定义邮箱：<input type="text" name="diy_email" placeholder="***@***.***" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"/>
+    </p>
+
+<!--    滑块   -->
+    <p>
+        音量：<input type="range" name="audio_num" value="10" max="100" min="0"/>
+    </p>
+
+    <p>
+        <label for="1001">点一下试试</label>
+    </p>
+    
     <p>
         <input type="submit">
         <input type="reset">
