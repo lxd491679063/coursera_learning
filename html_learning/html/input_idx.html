@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input 输入框组件</title>
+</head>
+<body>
+<!--
+input
+type:指定类型
+｛text,password,checkbox,radio,submit,reset,file,hidden,image,button,默认text｝
+name:元素名称
+value:元素初始值 (type 为radio时必须指定初始值
+size:表单元素初始宽度
+maxlength:类型为text和password时的最大字符数
+checkd:type 为radio 或 checkbox时，指定按钮是否被选中
+-->
+
+<h1>注册</h1>
+<form action="first_test.html" method="get">
+    <p name="passport">账号 <input type="text" name="username" value="用户名" maxlength="12" size="30"></p>
+    <p>密码 <input type="password" name="pwd" size="30" maxlength="12"></p>
+<!--    单选框 -->
+    <p> 想要多少钱：<br/>
+        <input type="radio" value="100" name="money"/>100<br/>
+        <input type="radio" value="200" name="money"/>200<br/>
+        <input type="radio" value="300" name="money"/>300<br/>
+    </p>
+    <p> 按钮 <br/>
+        <input type="button" name="test_btn" value="测试按钮">
+        <input type="image" src="../res/img/召合技能书.png" size="30"/>
+    </p>
+    <p>
+        多选框 <br/>
+        <input type="checkbox" name="select_1" value="吃饭">吃饭<br/>
+        <input type="checkbox" name="select_2" value="睡觉">睡觉<br/>
+        <input type="checkbox" name="select_3" value="打豆豆">打豆豆<br/>
+        <input type="checkbox" name="select_4" value="蹭吃">蹭吃<br/>
+    </p>
+    <p>
+        聚餐选择 <br/>
+        <input type="checkbox" name="eat_1" value="火锅">火锅<br/>
+        <input type="checkbox" name="eat_2" value="烤肉">烤肉<br/>
+        <input type="checkbox" name="eat_3" value="海底捞">海底捞<br/>
+        <input type="checkbox" name="eat_4" value="弄堂里">弄堂里<br/>
+    </p>
+
+    <p>
+        国家：<br/>
+        <select name="country" id="1001">
+            <option value="china">中国</option>
+            <option value="USA">美国</option>
+            <option value="Switzerland" selected>瑞士</option>
+            <option value="Canada">加拿大</option>
+        </select>
+    </p>
+
+    <p>
+        <textarea name="reply" id="1002" cols="100" rows="10" value="文本内容">test3</textarea>
+    </p>
+
+    <p>
+        <input type="file" value="文件" name="upload_file">
+    </p>
+
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+</form>
+
+</body>
+</html>
