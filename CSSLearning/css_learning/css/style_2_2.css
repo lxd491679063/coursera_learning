@@ -1,0 +1,28 @@
+/*p{*/
+/*    background: greenyellow;*/
+/*}*/
+
+/*后代选择器，选择某个节点之后所有后代类中对应元素*/
+/*body li{*/
+/*    background: red;*/
+/*}*/
+
+/*子选择器 该节点后的一代节点*/
+/*body>p{*/
+/*    background: yellow;*/
+/*}*/
+
+/*相邻兄弟节点 只有邻近的同辈节点，且是该节点的下一个节点*/
+/*.brother + p{*/
+/*    background: blue;*/
+/*}*/
+
+/*这种隔了一隔元素就不是相邻了*/
+/*.brother + a{*/
+/*    background: pink;*/
+/*}*/
+
+/*通用选择器 相邻兄弟加上自己一起应用样式*/
+.brother~a{
+    background: antiquewhite;
+}
